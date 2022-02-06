@@ -1,0 +1,96 @@
+.contact-form__main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: $night-sky;
+	opacity: 0.7;
+}
+
+.contact-form-box {
+	background-color: $blue-grey;
+	max-width: 650px;
+	min-height: 612px;
+	border-radius: 12px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		box-sizing: content-box;
+		max-width: 590px;
+		margin: 0 auto;
+		padding: 0 30px;
+		padding-bottom: 30px;
+	}
+	&__subheading {
+		max-width: 517px;
+		margin: 30px 0 15px 0;
+	}
+	&__close-btn {
+		width: 32px;
+		height: 32px;
+		background-image: url(../assets/images/header/close_btn_cross.svg);
+		background-position: center;
+		border: 1px solid transparent;
+		right: 1px;
+		top: 1px;
+	}
+	&__close-btn:hover {
+		border: 1px solid $purple;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+}
+
+.div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+	&__input {
+		border: none;
+		border-radius: 12px;
+		padding: 15px 0 15px 15px;
+		width: 90%;
+		margin-top: 15px;
+		font-family: 'Montserrat', sans-serif;
+		resize: none;
+		&--size {
+			padding: 15px 0 89px 15px;
+		}
+		&__input::placeholder {
+			font-family: 'Montserrat', sans-serif;
+			font-style: $fw-normal;
+			font-size: $fs-16px;
+			line-height: $lh-26;
+		}
+	}
+	&__input:focus {
+		outline: $blue solid 1px;
+	}
+	&__user-data {
+		color: $grey;
+		text-transform: uppercase;
+		&--size {
+			margin-top: 30px;
+		}
+	}
+	&__send-btn {
+		background-color: $blue;
+		border: none;
+		border-radius: 12px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		box-shadow: 0px 0px 20px $blue;
+		cursor: pointer;
+		&--size {
+			margin-top: 30px;
+		}
+	}
+}
+

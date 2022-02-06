@@ -1,0 +1,217 @@
+.main {
+	flex-grow: 1;
+}
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+}
+
+.review-card {
+	display: flex;
+	background-color: $blue-grey;
+	border-radius: 12px;
+	margin-top: 60px;
+	&__img {
+		background-image: url(../assets/images/main/aleksandr-photo.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		border-radius: 12px 0 0 12px;
+	}
+	.review {
+		display: flex;
+		flex-direction: column;
+		padding: 30px;
+		&__paragraph {
+			background-image: linear-gradient(90deg, #F0145A, #EF8080);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			&--position {
+				margin-top: 5px;
+			}
+		}
+		&__name {
+			color: $grey;
+			&--position {
+				margin-top: 30px;
+			}
+		}
+		&__post {
+			color: $grey;
+			&--position {
+				margin-top: 6px;
+			}
+		}
+	}
+}
+
+.carousel {
+	display: flex;
+	justify-content: space-between;
+	width: 78px;
+	margin: 0 auto;
+	margin-top: 30px;
+	&__btn {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: $blue;
+		opacity: 0.2;
+	}
+	&__btn:hover,
+	:checked {
+		opacity: 1;
+	}
+}
+
+ input.carousel__btn:nth-child(2) {
+	 margin: 0 15px;
+ }
+
+.carousel__input {
+	display: none;
+}
+
+.carousel__input:checked + .carousel__btn {
+	opacity: 1;
+}
+
+.partners {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		color: $night-sky;
+		text-transform: uppercase;
+		text-align: center;
+		&--position {
+			margin-top: 60px;
+		}
+	}
+	&__box {
+		margin-top: 30px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__cell {
+		height: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+		&--color-1 {
+			background-color: $logo-blue;
+		}
+		&--color-2 {
+			background-color: $logo-green;
+		}
+		&--color-3 {
+			background-color: $logo-orange;
+		}
+		&--color-4 {
+			background-color: $logo-magenta;
+		}
+		&--color-5 {
+			background-color: $logo-light-orange;
+		}
+		&--color-6 {
+			background-color: $logo-grey;
+		}
+		&--color-7 {
+			background-color: $logo-red;
+		}
+		&--color-8 {
+			background-color: $logo-cyan;
+		}
+		&--color-9 {
+			background-color: $logo-smoke-grey;
+		}
+		&--color-10 {
+			background-color: $logo-violet;
+		}
+		&--color-11 {
+			background-color: $logo-deep-ocean;
+		}
+		&--color-12 {
+			background-color: $black;
+		}
+	}
+	&__object {
+	}
+}
+
+.last-section {
+	display: flex;
+	flex-direction: column;
+	&__bg {
+		background-color: $blue-grey;
+		padding: 30px 0;
+	}
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		margin-top: 30px;
+		.publication-card {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__title {
+		margin-top: 10px;
+	}
+}
+
+.publication-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $white;
+	border-radius: 8px;
+	min-height: 420px;
+	padding-bottom: 15px;
+	box-sizing: content-box;
+	&__object {
+		min-height: 200px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 8px 8px 0 0;
+		&--tablets {
+			background-image: url(../assets/images/main/tablets-in-hands.jpg);
+		}
+		&--gdpr {
+			background-image: url(../assets/images/main/GDPR.png);
+		}
+		&--team {
+			background-image: url(../assets/images/main/team.png);
+		}
+	}
+	&__box {
+		max-width: 360px;
+	}
+	&__title {
+		color: $blue;
+		&--position {
+			margin-top: 30px;
+			padding: 0 10px;
+		}
+	}
+	&__date {
+		color: $grey;
+		&--position {
+			margin: 15px 10px 0;
+			padding-bottom: 15px;
+			border-bottom: 4px solid $bg-grey;
+		}
+	}
+	&__txt {
+		color: $black;
+		&--position {
+			margin-top: 15px;
+			padding: 0 10px;
+		}
+	}
+}

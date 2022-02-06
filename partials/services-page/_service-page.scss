@@ -1,0 +1,341 @@
+@import"../reset";
+@import "../var";
+@import "../txt-styles";
+
+.section-gradient {
+	position: relative;
+	min-height: calc(100vh - 20px);
+	background: linear-gradient(229deg, $night-sky 12%, $night-sky 57%, $light-purple 87%);;
+	border-radius: 0 0 12px 12px;
+	margin-bottom: 20px;
+	&__shadow {
+		position: absolute;
+		height: 10px;
+		border-radius: 0 0 12px 12px;
+		&--1 {
+			background-color: $border-gray;
+			bottom: -10px;
+			left: 20px;
+			width: calc(100% - 40px);
+		}
+		&--2 {
+			background-color: $border-gray-light;
+			bottom: -20px;
+			left: 40px;
+			width: calc(100% - 80px);
+		}
+	}
+}
+
+.main-wrap {
+	min-height: 100vh;
+	position: relative;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.header div {
+	color: white;
+}
+
+.grid-header {
+	display: grid;
+	width: 100%;
+	padding-top: 50px;
+	justify-content: space-between;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+	"logo contacts"
+	"logo navigation";
+	&__logo {
+		grid-area: logo;
+		background-image: url(../assets/images/header/hlegal-logo.svg);
+	}
+	&__contacts {
+		grid-area: contacts;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.language-selection {
+				display: flex;
+				&__btn {
+					display: none;
+				}
+				&__label {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background-color: transparent;
+					border: none;
+					width: 33px;
+					height: 25px;
+				}
+				&__btn:checked + .language-selection__label {
+					background-color: $purple;
+					border-radius: 8px;
+				}	
+		}
+		.language-selection__label:hover {
+				background-color: $purple;
+				border-radius: 8px;
+				transition: 0.3s;
+		}
+		.dot-separator {
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $bg-grey;
+			margin: 0 6px;
+		}
+	}
+	&__facebook-link {
+		width: 24px;
+		height: 24px;
+		background-image: url(../assets/images/header/facebook_white.svg);
+		background-position: center;
+	}
+	&__navigation {
+		grid-area: navigation;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 10px;
+		.nav-list {
+			display: flex;
+			&--position {
+				margin-left: 15px;
+			}
+		}
+		.nav-list a {
+			padding-bottom: 3px;
+			border-bottom: 2px solid transparent;
+		}
+		.nav-list a:hover {
+			color: $purple;
+			border-color: $purple;
+		}
+		.nav-list {
+			&--active a {
+				color: $purple;
+				border-color: $purple;
+			}
+		}
+	}
+	&__mobile-navigation {
+		grid-area: mobile-navigation;
+		display: none;
+	}
+}
+
+.burger-btn {
+	display: none;
+	&__label {
+		display: block;
+		width: 32px;
+		height: 32px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../assets/images/header/nav-list_hamburger.svg);
+	}
+}
+
+.big-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1080px;
+	&--mr {
+		margin-top: 60px;
+	}
+	&__title {
+		margin-top: 28px;
+		text-align: center;
+	}
+	&__paragraph {
+		text-align: center;
+		&--mr {
+			margin-top: 28px;
+		}
+	}
+	&__btn {
+		padding: 18px 30px;
+		background-color: $blue;
+		border-radius: 12px;
+		box-shadow: 0px 0px 20px $blue;
+		&--mr {
+			margin-top: 28px;
+		}
+	}
+}
+
+.services-list {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 0 60px 0;
+	max-width: 1080px;
+	border-top: 4px solid rgba(255, 255, 255, 0.5);
+	&--mr {
+		margin-top: 60px;
+	}
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		&--mr {
+			margin-top: 30px;
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+	}
+	&__item {
+		padding: 0 30px;
+	}
+	&__item::before {
+		content: '';
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: $purple;
+		border-radius: 50%;
+		margin-right: 8px;
+	}
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.last-section {
+	display: flex;
+	flex-direction: column;
+	&__bg {
+		background-color: $blue-grey;
+		padding: 30px 0;
+	}
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		margin-top: 30px;
+		.publication-card {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__title {
+		margin-top: 10px;
+	}
+}
+
+.last-section > a {
+	color: $blue;
+}
+
+.last-section object {
+	position: relative;
+	top: 1px;
+	left: 2px;
+}
+
+.publication-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $white;
+	border-radius: 8px;
+	min-height: 420px;
+	padding-bottom: 15px;
+	box-sizing: content-box;
+	&__object {
+		min-height: 200px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 8px 8px 0 0;
+		&--tablets {
+			background-image: url(../assets/images/main/tablets-in-hands.jpg);
+		}
+		&--gdpr {
+			background-image: url(../assets/images/main/GDPR.png);
+		}
+		&--team {
+			background-image: url(../assets/images/main/team.png);
+		}
+	}
+	&__box {
+		max-width: 360px;
+	}
+	&__title {
+		color: $blue;
+		&--position {
+			margin-top: 30px;
+			padding: 0 10px;
+		}
+	}
+	&__date {
+		color: $grey;
+		&--position {
+			margin: 15px 10px 0;
+			padding-bottom: 15px;
+			border-bottom: 4px solid $bg-grey;
+		}
+	}
+	&__txt {
+		color: $black;
+		&--position {
+			margin-top: 15px;
+			padding: 0 10px;
+		}
+	}
+}
+
+.footer {
+	background-color: $blue-grey;
+	padding-bottom: 30px;
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+	&__row:nth-child(2) {
+		margin-top: 20px;
+	}
+	&__txt {
+		&--night-sky {
+			color: $night-sky;
+		}
+		&--blue {
+			color: $blue;
+		}
+	}
+	&__map {
+		color: $blue;
+		text-transform: uppercase;
+	}
+	&__dot-separ {
+		height: 6px;
+		width: 6px;
+		border-radius: 50%;
+		background-color: $grey;
+		margin: 0 10px;
+	}
+	&__copyright {
+		color: $grey;
+		align-self: flex-start;
+	}
+}
+
+.footer-box {
+display: flex;
+justify-content: space-between;
+border-top: 2px solid $bg-grey;
+padding-top: 30px;
+}

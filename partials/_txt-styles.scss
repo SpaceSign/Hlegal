@@ -1,0 +1,72 @@
+.txt-xtra-sm {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-12px;
+	line-height: $lh-15;
+}
+
+.txt-sm {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-14px;
+	line-height: $lh-17;
+}
+
+.txt-sm-up {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-14px;
+	line-height: $lh-22;
+}
+
+.txt-regular-sm {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-16px;
+	line-height: $lh-20;
+}
+
+.txt-regular {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-16px;
+	line-height: $lh-26;
+}
+
+.regular-up {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-19px;
+	line-height: $lh-30;
+}
+
+.regular-services {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-18px;
+	line-height: $lh-26;
+}
+
+.txt-bold {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-22px;
+	line-height: $lh-27;
+}
+
+.txt-large {
+	color: $white;
+	font-weight: $fw-normal;
+	font-size: $fs-38px;
+	line-height: $lh-46;
+}
+
+.fw-bold {
+	font-weight: $fw-bold;
+}
+
+.txt-grad-purple {
+	background-image: linear-gradient(90deg, #F0145A, #EF8080);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

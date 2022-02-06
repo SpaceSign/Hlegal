@@ -1,0 +1,41 @@
+.footer {
+		background-color: $blue-grey;
+		padding-bottom: 30px;
+		&__row {
+			display: flex;
+			align-items: center;
+		}
+		&__row:nth-child(2) {
+			margin-top: 20px;
+		}
+		&__txt {
+			&--night-sky {
+				color: $night-sky;
+			}
+			&--blue {
+				color: $blue;
+			}
+		}
+		&__map {
+			color: $blue;
+			text-transform: uppercase;
+		}
+		&__dot-separ {
+			height: 6px;
+			width: 6px;
+			border-radius: 50%;
+			background-color: $grey;
+			margin: 0 10px;
+		}
+		&__copyright {
+			color: $grey;
+			align-self: flex-start;
+		}
+}
+
+.footer-box {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid $bg-grey;
+	padding-top: 30px;
+}

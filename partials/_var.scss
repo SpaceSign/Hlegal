@@ -1,0 +1,78 @@
+// MAIN CLASSES
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+// COLUMNS
+
+$gd-col: 13;
+$gd-size: 8.33%;
+
+@for $i from 1 to $gd-col {
+	.col-#{$i} {
+		width: $gd-size * $i;
+		padding: 0 15px;
+		flex-grow: 1;
+	}
+}
+
+.container {
+	max-width: 1320px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+// COLORS
+
+$white: #fff;
+$black: #000;
+$night-sky: #323264;
+$light-purple: #643E72;
+$purple: #F0145A;
+$grey: #B3B3BA;
+$bg-grey: #E6E6F0;
+$border-gray: #CACADB;
+$border-gray-light: #E7E7F2;
+$blue-grey: #F5F5FA;
+$blue: #24A3FF;
+$logo-blue: #1C4280;
+$logo-green: #143646;
+$logo-orange: #F48B30;
+$logo-light-orange: #FD9339;
+$logo-magenta: #9E4DC3;
+$logo-grey: #E2E2E4;
+$logo-smoke-grey: #EAEAEA;
+$logo-red: #C71C36;
+$logo-cyan: #DCF3F9;
+$logo-violet: #282240;
+$logo-deep-ocean: #1D4568;
+
+
+// FONT STYLES
+
+$fw-normal: 400;
+$fw-bold: 700;
+
+$fs-12px: 12px;
+$fs-14px: 14px;
+$fs-16px: 16px;
+$fs-18px: 18px;
+$fs-19px: 19px;
+$fs-20px: 20px;
+$fs-22px: 22px;
+$fs-24px: 24px;
+$fs-30px: 30px;
+$fs-38px: 38px;
+
+$lh-15: 15px;
+$lh-17: 17px;
+$lh-20: 20px;
+$lh-22: 22px;
+$lh-24: 24px;
+$lh-26: 26px;
+$lh-27: 27px;
+$lh-29: 29px;
+$lh-30: 30px;
+$lh-37: 37px;
+$lh-46: 46px;

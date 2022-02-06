@@ -1,0 +1,343 @@
+.section-gradient {
+	position: relative;
+	min-height: calc(100vh - 20px);
+	background: linear-gradient(229deg, $night-sky 12%, $night-sky 57%, $light-purple 87%);;
+	border-radius: 0 0 12px 12px;
+	margin-bottom: 20px;
+	&__shadow {
+		position: absolute;
+		height: 10px;
+		border-radius: 0 0 12px 12px;
+		&--1 {
+			background-color: $border-gray;
+			bottom: -10px;
+			left: 20px;
+			width: calc(100% - 40px);
+		}
+		&--2 {
+			background-color: $border-gray-light;
+			bottom: -20px;
+			left: 40px;
+			width: calc(100% - 80px);
+		}
+	}
+}
+
+.main-wrap {
+	min-height: 100vh;
+	position: relative;
+}
+
+.main-wrap-bg {
+	min-height: 100vh;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	overflow-x: hidden;
+	&__object {
+		position: absolute;
+		min-height: 100vh;
+	}
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.header div {
+	color: white;
+}
+
+.grid-header {
+	display: grid;
+	width: 100%;
+	padding-top: 50px;
+	justify-content: space-between;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+	"logo contacts"
+	"logo navigation";
+	&__logo {
+		grid-area: logo;
+		width: 130px;
+		height: 60px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../assets/images/header/hlegal-logo.svg);
+	}
+	&__contacts {
+		grid-area: contacts;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.language-selection {
+				display: flex;
+				&__btn {
+					display: none;
+				}
+				&__label {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background-color: transparent;
+					border: none;
+					width: 33px;
+					height: 25px;
+				}
+				&__btn:checked + .language-selection__label {
+					background-color: $purple;
+					border-radius: 8px;
+				}	
+		}
+		.language-selection__label:hover {
+				background-color: $purple;
+				border-radius: 8px;
+				transition: 0.3s;
+		}
+		.dot-separator {
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $bg-grey;
+			margin: 0 6px;
+		}
+	}
+	&__facebook-link {
+		width: 24px;
+		height: 24px;
+		background-image: url(../assets/images/header/facebook_white.svg);
+		background-position: center;
+	}
+	&__navigation {
+		grid-area: navigation;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 10px;
+		.nav-list {
+			display: flex;
+			&--position {
+				margin-left: 15px;
+			}
+		}
+		.nav-list a {
+			padding-bottom: 3px;
+			border-bottom: 2px solid transparent;
+		}
+		.nav-list a:hover {
+			color: $purple;
+			border-color: $purple;
+		}
+	}
+	&__mobile-navigation {
+		grid-area: mobile-navigation;
+		display: none;
+	}
+}
+
+.burger-btn {
+	display: none;
+	&__label {
+		display: block;
+		width: 32px;
+		height: 32px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../../assets/images/header/nav-list_hamburger.svg);
+	}
+}
+
+.mobile-navigation {
+	display: none;
+	position: fixed;
+	background-color: $white;
+	border-radius: 12px 12px 0 0;
+	z-index: 10000;
+	min-width: 92%;
+	height: fit-content;
+	left: 50%;
+	bottom: 0vh;
+	transform: translate(-50%);
+	margin: 0 auto;
+	.mob-nav-close {
+		display: none;
+		&__label {
+			display: block;
+			background-image: url(../assets/images/header/close_btn_cross.svg);
+			background-position: center;
+			height: 32px;
+			width: 32px;
+			margin: 19px 19px 0 auto;
+			&:hover {
+				border: 1px solid $purple;
+				border-radius: 7px;
+			}
+		}
+		&__list {
+			padding: 22px;
+			text-align: center;
+		}
+		&__list li {
+			padding-top: 15px;
+		}
+		&__item {
+			display: block;
+			color: $blue;
+			background-color: $blue-grey;
+			border-radius: 12px;
+			font-size: $fs-24px;
+			line-height: $lh-29;
+			padding: 7px 0;
+			&:hover {
+				color: $purple;
+				background-color: $bg-grey;
+			}
+		}
+	}
+}
+
+.mob-nav-close:checked + .mobile-navigation {
+	display: none;
+}
+
+
+.circle-btn {
+	width: 42px;
+	height: 42px;
+	background-color: transparent;
+	background-image: url(../assets/images/main/circle-btn.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
+}
+
+.circle-btn:hover {
+	background-image: url(../assets/images/main/circle-btn-active.svg);
+}
+
+.third-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	&--position {
+		padding-left: 120px;
+		margin-top: 90px;
+	}
+	&__separator-rectang {
+		width: 4px;
+		height: 303px;
+		background-color: $white;
+		opacity: 0.3;
+		margin: 0 60px;
+	}
+}
+
+.third-section {
+	.advantages {
+		&__list {
+			color: $grey;
+		}
+	}
+}
+
+.advantages {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	&__box {
+		max-width: 581px;
+	}
+	&__list {
+		margin-top: 30px;
+		text-align: end;
+		&:hover {
+			color: $purple;
+		}
+	}
+}
+
+.advantages__list:nth-child(2) {
+	margin-top: 0;
+}
+.advantages input {
+	display: none;
+}
+
+.advantages input[type="radio"]:checked + .advantages__list {
+	background-image: linear-gradient(270deg, #F0145A, #EF8080);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+.services {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	&--position {
+		margin-top: 60px;
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+	}
+	&__subheading {
+		margin-top: 10px;
+	}
+}
+
+.txt-link {
+	color: $blue;
+	text-transform: uppercase;
+}
+
+.txt-link object {
+	margin-left: 4px;
+}
+
+.services__cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	margin-bottom: 60px;
+}
+
+.card {
+	margin-top: 60px;
+	&__title {
+		color: $blue;
+		&--position {
+			margin-top: 30px;
+		}
+	}
+	&__txt {
+		&--position {
+			margin-top: 15px;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.grid-header {
+		display: grid;
+		grid-template-areas: 
+		"first-row"
+		"logo"
+		"second-row";
+		grid-template-columns: 1fr;
+		&__logo,
+		&__second-row {
+			margin-top: 30px;
+		}
+	}
+}
